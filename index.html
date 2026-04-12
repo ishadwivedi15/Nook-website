@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Nook Cafe | Where Every Sip Feels Like Home</title>
+    <meta name="description"
+        content="A cozy corner where coffee meets comfort. Handcrafted beverages, fresh pastries, and warm conversations await.">
+
+    <!-- Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        nook: {
+                            cream: '#F5F1E8',
+                            dark: '#2C3E2E',
+                            green: '#7D9B7D',
+                            'green-dark': '#6A8A6A',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        script: ['Parisienne', 'cursive'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-nook-cream text-nook-dark font-sans selection:bg-nook-green selection:text-white">
+
+    <div id="floating-logo-container">
+        <img id="floating-logo" src="NOOK FINAL BOARD_page-0001-Photoroom.png" alt="The Nook Cafe Logo">
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-6">
+        <div class="container mx-auto px-6 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <!-- Placeholder for Logo landing -->
+                <div id="logo-placeholder" class="w-48 h-12 opacity-0">
+                    <!-- Placeholder matches PDF aspect ratio -->
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home"
+                    class="nav-link text-sm font-medium uppercase tracking-wide hover:text-nook-green transition-colors relative group">
+                    Home
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-nook-green group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#menu"
+                    class="nav-link text-sm font-medium uppercase tracking-wide hover:text-nook-green transition-colors relative group">
+                    Our Menu
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-nook-green group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#story"
+                    class="nav-link text-sm font-medium uppercase tracking-wide hover:text-nook-green transition-colors relative group">
+                    Our Story
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-nook-green group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#gallery"
+                    class="nav-link text-sm font-medium uppercase tracking-wide hover:text-nook-green transition-colors relative group">
+                    Gallery
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-nook-green group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="#contact"
+                    class="nav-link text-sm font-medium uppercase tracking-wide hover:text-nook-green transition-colors relative group">
+                    Contact
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-nook-green group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <button
+                    class="bg-nook-green text-white px-6 py-2 rounded-full hover:bg-nook-green-dark transition-all duration-300 shadow-md transform hover:scale-105">
+                    Visit Us
+                </button>
+            </div>
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden text-nook-dark hover:text-nook-green transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 12h16" />
+                    <path d="M4 18h16" />
+                    <path d="M4 6h16" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center"
+            style="background-image: url('https://wjnjnrrnxmhymodcwdsx.supabase.co/storage/v1/object/public/Images/Main%20image.jpeg'); filter: brightness(0.65);">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-b from-nook-dark/60 via-nook-dark/40 to-nook-cream/20"></div>
+
+        <div class="relative z-10 text-center px-6 max-w-5xl mx-auto min-h-[50vh] flex items-center justify-center">
+            <!-- Hero content is entirely minimal, centered logo is handled by #floating-logo-container -->
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="text-nook-cream/60">
+                <path d="m6 9 6 6 6-6" />
+            </svg>
+        </div>
+
+        <!-- Wave Transition -->
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
+                <path
+                    d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"
+                    fill="#F5F1E8"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Signature Menu -->
+    <section id="menu" class="py-24 bg-nook-cream">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="text-center mb-20 reveal-up">
+                <span class="text-nook-green font-script text-3xl block mb-2">Taste of Home</span>
+                <h2 class="text-5xl md:text-7xl font-serif text-nook-dark mb-4">The Daily Signature</h2>
+                <div class="w-24 h-1 bg-nook-green mx-auto rounded-full opacity-30"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-x-20 gap-y-12">
+                <!-- Coffee & Drinks Column -->
+                <div class="space-y-12 reveal-up">
+                    <h3 class="text-3xl font-serif text-nook-dark/40 italic mb-8 border-b border-nook-green/10 pb-4">
+                        Coffee & Cold Brew</h3>
+
+                    <div
+                        class="menu-item-row group cursor-pointer nm-flat p-6 rounded-[2rem] transition-all duration-500 hover:scale-[1.02]">
+                        <div class="flex items-end justify-between mb-1">
+                            <h4
+                                class="text-xl font-medium text-nook-dark group-hover:text-nook-green transition-colors">
+                                House Blend Drip</h4>
+                            <div class="menu-item-dot"></div>
+                            <span class="text-nook-green font-semibold">$4.50</span>
+                        </div>
+                        <p class="text-sm text-nook-dark/50 italic">Ethically sourced, medium roast with notes of
+                            chocolate and almond.</p>
+                    </div>
+
+                    <div
+                        class="menu-item-row group cursor-pointer nm-flat p-6 rounded-[2rem] transition-all duration-500 hover:scale-[1.02]">
+                        <div class="flex items-end justify-between mb-1">
+                            <h4
+                                class="text-xl font-medium text-nook-dark group-hover:text-nook-green transition-colors">
+                                Velvet Oat Latte</h4>
+                            <div class="menu-item-dot"></div>
+                            <span class="text-nook-green font-semibold">$6.25</span>
+                        </div>
+                        <p class="text-sm text-nook-dark/50 italic">Double shot espresso with steamed creamy oat milk
+                            and a touch of honey.</p>
+                    </div>
+
+                    <div
+                        class="menu-item-row group cursor-pointer nm-flat p-6 rounded-[2rem] transition-all duration-500 hover:scale-[1.02]">
+                        <div class="flex items-end justify-between mb-1">
+                            <h4
+                                class="text-xl font-medium text-nook-dark group-hover:text-nook-green transition-colors">
+                                Signature Cold Brew</h4>
+                            <div class="menu-item-dot"></div>
+                            <span class="text-nook-green font-semibold">$5.50</span>
+                        </div>
+                        <p class="text-sm text-nook-dark/50 italic">18-hour steep, served over large ice with optional
+                            vanilla sweet cream.</p>
+                    </div>
+
+                    <div class="menu-item-row group cursor-pointer">
+                        <div class="flex items-end justify-between mb-1">
+                            <h4
+                                class="text-xl font-medium text-nook-dark group-hover:text-nook-green transition-colors">
+                                Ceremonial Matcha</h4>
+                            <div class="menu-item-dot"></div>
+                            <span class="text-nook-green font-semibold">$6.50</span>
+                        </div>
+                        <p class="text-sm text-nook-dark/50 italic">Whisked-to-order premium Uji matcha with choice of
+                            milk.</p>
+                    </div>
+                </div>
+
+                <!-- Kitchen & Pastry Column -->
+                <div class="space-y-12 reveal-up" style="transition-delay: 200ms;">
+                    <h3 class="text-3xl font-serif text-nook-dark/40 italic mb-8 border-b border-nook-green/10 pb-4">
+                        From the Kitchen</h3>
+
+                    <div class="menu-item-row group cursor-pointer">
+                        <div class="flex items-end justify-between mb-1">
+                            <h4
+                                class="text-xl font-medium text-nook-dark group-hover:text-nook-green transition-colors">
+                                Signature Avo Toast</h4>
+                            <div class="menu-item-dot"></div>
+                            <span class="text-nook-green font-semibold">$12.50</span>
+                        </div>
+                        <p class="text-sm text-nook-dark/50 italic">Sourdough, smashed avocado, chili flakes, radish,
+                            and organic poached egg.</p>
+                    </div>
+
+                    <div class="menu-item-row group cursor-pointer">
+                        <div class="flex items-end justify-between mb-1">
+                            <h4
+                                class="text-xl font-medium text-nook-dark group-hover:text-nook-green transition-colors">
+                                Almond Croissant</h4>
+                            <div class="menu-item-dot"></div>
+                            <span class="text-nook-green font-semibold">$5.75</span>
+                        </div>
+                        <p class="text-sm text-nook-dark/50 italic">Double-baked daily with house-made frangipane and
+                            toasted flakes.</p>
+                    </div>
+
+                    <div class="menu-item-row group cursor-pointer">
+                        <div class="flex items-end justify-between mb-1">
+                            <h4
+                                class="text-xl font-medium text-nook-dark group-hover:text-nook-green transition-colors">
+                                Nook Breakfast Bowl</h4>
+                            <div class="menu-item-dot"></div>
+                            <span class="text-nook-green font-semibold">$11.00</span>
+                        </div>
+                        <p class="text-sm text-nook-dark/50 italic">Quinoa, soft boiled egg, seasonal greens, and
+                            lemon-tahini dressing.</p>
+                    </div>
+
+                    <div class="menu-item-row group cursor-pointer">
+                        <div class="flex items-end justify-between mb-1">
+                            <h4
+                                class="text-xl font-medium text-nook-dark group-hover:text-nook-green transition-colors">
+                                Seasonal Fruit Tart</h4>
+                            <div class="menu-item-dot"></div>
+                            <span class="text-nook-green font-semibold">$7.50</span>
+                        </div>
+                        <p class="text-sm text-nook-dark/50 italic">Buttery shortbread crust with vanilla bean custard
+                            and fresh local berries.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-20 reveal-up">
+                <button
+                    class="bg-nook-dark text-nook-cream px-12 py-4 rounded-full text-lg font-medium hover:bg-nook-green transition-all duration-500 shadow-xl">
+                    Download Full Menu (PDF)
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carousel Section -->
+    <section id="gallery" class="py-24 bg-nook-cream/50 overflow-hidden">
+        <div class="container mx-auto px-6 mb-12">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 reveal-up">
+                <div>
+                    <span class="text-nook-green font-script text-3xl">Visual Journal</span>
+                    <h2 class="text-5xl md:text-6xl font-serif text-nook-dark">The Nook Experience</h2>
+                </div>
+                <p class="text-nook-dark/60 max-w-md italic">A glimpse into our daily rhythm, where coffee meets craft
+                    and community.</p>
+            </div>
+        </div>
+
+        <div class="gallery-carousel reveal-up">
+            <div class="carousel-track">
+                <div class="carousel-slide">
+                    <img src="https://wjnjnrrnxmhymodcwdsx.supabase.co/storage/v1/object/public/Images/Gallery1.jpeg"
+                        alt="Gallery 1" class="w-full h-full object-cover">
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://wjnjnrrnxmhymodcwdsx.supabase.co/storage/v1/object/public/Images/Gallery2.jpeg"
+                        alt="Gallery 2" class="w-full h-full object-cover">
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://wjnjnrrnxmhymodcwdsx.supabase.co/storage/v1/object/public/Images/Gallery3.jpeg"
+                        alt="Gallery 3" class="w-full h-full object-cover">
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://wjnjnrrnxmhymodcwdsx.supabase.co/storage/v1/object/public/Images/Gallery4.jpeg"
+                        alt="Gallery 4" class="w-full h-full object-cover">
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://wjnjnrrnxmhymodcwdsx.supabase.co/storage/v1/object/public/Images/Gallery5.jpeg"
+                        alt="Gallery 5" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="story" class="py-24 bg-white relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
+                <div class="relative reveal-left">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&q=80"
+                            alt="Our Story" class="w-full h-[600px] object-cover">
+                        <div class="absolute top-8 left-8 w-32 h-32 border-4 border-nook-green rounded-full opacity-30">
+                        </div>
+                        <div class="absolute bottom-8 right-8 w-24 h-24 bg-nook-green/20 rounded-full backdrop-blur-sm">
+                        </div>
+                    </div>
+                    <div
+                        class="absolute -bottom-8 -right-8 bg-nook-green text-white p-8 rounded-2xl shadow-xl max-w-xs reveal-up">
+                        <p class="text-4xl font-bold mb-2">Since 2018</p>
+                        <p class="text-nook-cream/80">Years of crafting exceptional experiences</p>
+                    </div>
+                </div>
+                <div class="reveal-right">
+                    <h2 class="text-5xl md:text-6xl font-serif text-nook-dark mb-6">Our Story</h2>
+                    <p class="text-nook-dark/70 text-lg leading-relaxed mb-8">
+                        The Nook is deeply personal an extension of its founder, Shruti Yugal, and her simple belief: if she can’t cook it herself, it doesn’t belong on the menu. Every dish is built from scratch, practiced, refined, and tested with real people before it’s served. There are no shortcuts, no outsourcing just honest, thoughtful food made entirely in-house. What truly sets The Nook apart is this hands-on approach, where the menu is personally crafted, and the experience feels real. Born out of a genuine story rather than a trend, it’s a space that adapts to you whether you come to work, unwind, connect, or simply be and one that people don’t just visit, but keep coming back to.
+                    <div class="flex items-center space-x-4 mb-10 pb-8 border-b border-nook-green/20">
+                        <div class="owner-photo-circle">
+                            <img src="https://wjnjnrrnxmhymodcwdsx.supabase.co/storage/v1/object/public/Images/Owner%20photo.jpeg"
+                                alt="Shruti Yugal">
+                        </div>
+                        <div>
+                            <p class="font-semibold text-nook-dark text-lg">Shruti Yugal</p>
+                            <p class="text-nook-dark/60">Owner</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center space-x-3 group">
+                            <div class="w-2 h-2 bg-nook-green rounded-full group-hover:scale-150 transition-transform">
+                            </div>
+                            <span class="text-nook-dark font-medium">Locally Roasted Beans</span>
+                        </div>
+                        <div class="flex items-center space-x-3 group">
+                            <div class="w-2 h-2 bg-nook-green rounded-full group-hover:scale-150 transition-transform">
+                            </div>
+                            <span class="text-nook-dark font-medium">Handcrafted Pastries</span>
+                        </div>
+                        <div class="flex items-center space-x-3 group">
+                            <div class="w-2 h-2 bg-nook-green rounded-full group-hover:scale-150 transition-transform">
+                            </div>
+                            <span class="text-nook-dark font-medium">Organic Ingredients</span>
+                        </div>
+                        <div class="flex items-center space-x-3 group">
+                            <div class="w-2 h-2 bg-nook-green rounded-full group-hover:scale-150 transition-transform">
+                            </div>
+                            <span class="text-nook-dark font-medium">Plant-Based Options</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <section class="py-16 bg-nook-green overflow-hidden">
+        <div class="animate-marquee text-white text-2xl md:text-3xl font-serif">
+            <span class="mx-12">Locally Roasted Beans •</span>
+            <span class="mx-12">Handcrafted Pastries •</span>
+            <span class="mx-12">Organic Ingredients •</span>
+            <span class="mx-12">Sustainable Brewing •</span>
+            <span class="mx-12">Locally Roasted Beans •</span>
+            <span class="mx-12">Handcrafted Pastries •</span>
+            <span class="mx-12">Organic Ingredients •</span>
+            <span class="mx-12">Sustainable Brewing •</span>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-16">
+                    <div class="reveal-left">
+                        <h2 class="text-5xl md:text-6xl font-serif text-nook-dark mb-8">Visit Us</h2>
+                        <p class="text-nook-dark/70 text-lg mb-12">We'd love to have you over. Whether you're looking
+                            for a quiet place to work or a corner to catch up with friends, we've got a seat for you.
+                        </p>
+
+                        <div class="space-y-8 mb-12">
+                            <div class="flex items-start space-x-4">
+                                <div
+                                    class="w-12 h-12 bg-nook-green/10 rounded-full flex items-center justify-center flex-shrink-0 text-nook-green">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                        <circle cx="12" cy="10" r="3" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-nook-dark">Address</h4>
+                                    <p class="text-nook-dark/60 italic">The nook cafe , 2/6 , shubh mangal society , opposite
+                        bhartiya vidya bhawan , off SB ROAD , model colony , shivajinagar , pune 411016</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div
+                                    class="w-12 h-12 bg-nook-green/10 rounded-full flex items-center justify-center flex-shrink-0 text-nook-green">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <polyline points="12 6 12 12 16 14" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-nook-dark">Opening Hours</h4>
+                                    <p class="text-nook-dark/60">Mon - Sun: 11:30 AM - 11:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="rounded-3xl overflow-hidden h-64 grayscale hover:grayscale-0 transition-all duration-700 shadow-xl">
+                            <img src="https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&q=80"
+                                alt="Cafe Location" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+
+                    <div class="reveal-right nm-flat p-8 md:p-12 rounded-[2.5rem] border-none">
+                        <h3 class="text-3xl font-serif text-nook-dark mb-8">Send us a Message</h3>
+                        <form id="contactForm" class="space-y-6">
+                            <div class="grid grid-cols-2 gap-6">
+                                <div>
+                                    <label class="form-label">First Name</label>
+                                    <input type="text" class="form-input" placeholder="Sarah">
+                                </div>
+                                <div>
+                                    <label class="form-label">Last Name</label>
+                                    <input type="text" class="form-input" placeholder="Chen">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="form-label">Email Address</label>
+                                <input type="email" class="form-input nm-inset border-none rounded-2xl p-4 focus:ring-0"
+                                    placeholder="hello@example.com">
+                            </div>
+                            <div>
+                                <label class="form-label">Message</label>
+                                <textarea
+                                    class="form-input nm-inset border-none rounded-2xl p-4 focus:ring-0 h-32 resize-none"
+                                    placeholder="How can we help?"></textarea>
+                            </div>
+                            <button type="submit"
+                                class="w-full bg-nook-green hover:bg-nook-green-dark text-white py-4 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-2xl">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-nook-dark py-20 text-nook-cream">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 border-b border-white/10 pb-16">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="text-3xl font-serif text-nook-green mb-6">
+                        the <span class="font-script text-5xl">nook</span> cafe
+                    </div>
+                    <p class="text-nook-cream/60 max-w-sm leading-relaxed mb-8">
+                        Creating moments of peace through the perfect brew. Join us for a cup and stay for the
+                        community.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:bg-nook-green hover:border-nook-green transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:bg-nook-green hover:border-nook-green transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-4 text-nook-cream/60">
+                        <li><a href="#" class="hover:text-nook-green transition-colors">Home</a></li>
+                        <li><a href="#" class="hover:text-nook-green transition-colors">Menu</a></li>
+                        <li><a href="#" class="hover:text-nook-green transition-colors">Story</a></li>
+                        <li><a href="#" class="hover:text-nook-green transition-colors">Locations</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Contact Us</h4>
+                    <p class="text-nook-cream/60 mb-4 italic">The nook cafe , 2/6 , shubh mangal society , opposite
+                        bhartiya vidya bhawan , off SB ROAD , model colony , shivajinagar , pune 411016</p>
+                    <p class="text-nook-cream/60 mb-2">hello@thenookcafe.com</p>
+                    <p class="text-nook-cream/60">+91 93347 99714</p>
+                </div>
+            </div>
+            <div class="pt-8 text-center text-nook-cream/40 text-sm">
+                &copy; 2024 The Nook Cafe. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
